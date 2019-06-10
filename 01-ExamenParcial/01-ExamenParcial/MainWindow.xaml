@@ -6,7 +6,18 @@
         xmlns:local="clr-namespace:_01_ExamenParcial"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+    <StackPanel Background="PaleGreen">
+        <Label Content="Calcula Planilla" FontSize="31" HorizontalAlignment="Center"/>
+        <Label Content="Nombre Empleado" FontSize="15" HorizontalAlignment="Left" Grid.Column="2"/>
+        <Label Content="Identidad" FontSize="15"/>
+        <Label Content="Horas Trabajadas" FontSize="15"/>
+        <Label Content="Pago por hora normal de trabajo" FontSize="15"/>
+        <Label Content="Horas Extras" FontSize="15"/>
+        <Label Content="Pago por hora extra trabajada" FontSize="15"/>
+        <TextBox Width="50" Height="20"  Grid.Column="1" Grid.Row="1" Text="{Binding Path=NombreEmpleado, Mode=TwoWay}"/>
+        <TextBox Width="50" Height="20"  Grid.Column="2" Grid.Row="1" Text="{Binding Path=Identidad, Mode=TwoWay}"/>
+        <TextBox Width="50" Height="20"  Grid.Column="1" Grid.Row="2" Text="{Binding Path=PagoHoraNormal, Mode=TwoWay}"/>
+        <TextBox Width="50" Height="20"  Grid.Column="2" Grid.Row="2" Text="{Binding Path=HorasExtras, Mode=TwoWay}"/>
+        <TextBox Width="50" Height="20"  Grid.Column="2" Grid.Row="2" Text="{Binding Path=PagoHoraExtra, Mode=TwoWay}"/>
+    </StackPanel>
 </Window>
